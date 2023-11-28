@@ -1,3 +1,11 @@
+class AllTicketsSoldException extends Exception {
+    private static final String ALL_TICKETS_SOLD_MESSAGE = "All tickets for the %s departure at %s are sold out.";
+    
+    public AllTicketsSoldException(String departureDate, String departureTime) {
+            super(String.format(ALL_TICKETS_SOLD_MESSAGE, departureDate, departureTime));
+        }
+}
+
 public class Plane {
 
     private int planeTime;
