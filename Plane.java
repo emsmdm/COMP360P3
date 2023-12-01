@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class AllTicketsSoldException extends Exception {
-    private static final String ALL_TICKETS_SOLD_MESSAGE = "All tickets for the %s/%s departure at %s are sold out.";
+    private static final String ALL_TICKETS_SOLD_MESSAGE = "All tickets for the %s/%s departure at %s:00 are sold out.";
     
     public AllTicketsSoldException(int departureDate, int departureTime) {
             super(String.format(ALL_TICKETS_SOLD_MESSAGE, departureDate/100, departureDate%100, departureTime));
@@ -61,7 +61,6 @@ public class Plane {
             {
                 planes[i].planeSeats += 1;
                 planes[i].seatNumber -= 1;
-                System.out.println("Ticket returned!");
             }
         }
     }
